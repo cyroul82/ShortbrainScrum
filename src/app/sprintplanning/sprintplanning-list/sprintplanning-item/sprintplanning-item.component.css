@@ -1,0 +1,5 @@
+.validated {
+  background: grey;
+  pointer-events: none;
+  cursor: default;
+}
