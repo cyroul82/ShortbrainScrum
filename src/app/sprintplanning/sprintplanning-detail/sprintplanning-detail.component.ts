@@ -9,7 +9,6 @@ import { UserStory } from '../../shared/userstory.model';
 })
 export class SprintplanningDetailComponent implements OnInit {
   @Input() sprint: Sprint;
-  userStory: UserStory;
   constructor() { }
 
   ngOnInit() {
@@ -27,9 +26,21 @@ export class SprintplanningDetailComponent implements OnInit {
 
   drop(event) {
     event.preventDefault();
-    this.userStory = event.dataTransfer.getData("userStory");
-    console.log(this.userStory.name);
-    //event.target.appendChild(document.getElementById(data));
+    const userStoryId = event.dataTransfer.getData("text");
+    let target = event.target;
+    console.log("dans drop: " + event.target);
+
+    // go up till the parent div listUserStory
+    while(target.className !== 'listUserStory'){
+      target = target.parentNode;
+    }
+
+    //Select the div cards
+    target = target.querySelector('.cards');
+    console.log(target);
+    this.sprint.userStories.push(new UserStory("insert", "desc", 85, 10));
+    target.appendChild(document.getElementById(userStoryId));
+    target.removeChild(document.getElementById(userStoryId));
   }
 
   allowDrop(event) {

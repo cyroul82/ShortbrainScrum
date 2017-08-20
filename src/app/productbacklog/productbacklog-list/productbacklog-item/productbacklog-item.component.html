@@ -1,4 +1,4 @@
-<a href="#" class="list-group-item clearfix" draggable="true" (dragstart)="dragStart($event, userStory)">
+<a href="#" class="list-group-item clearfix" draggable="true" (dragstart)="dragStart($event)" id="userstory{{userStory.id}}">
   <div class="pull-left">
     <h4 class="list-group-item-heading">{{ userStory.name }}</h4>
     <h4 class="list-group-item-text">{{ userStory.description }}</h4>

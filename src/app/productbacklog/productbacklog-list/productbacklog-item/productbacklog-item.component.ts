@@ -13,9 +13,9 @@ export class ProductbacklogItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  dragStart(ev, userStory: UserStory) {
-    ev.dataTransfer.setData("userStory", userStory);
-    console.log("event : " + userStory);
+  dragStart(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+    console.log("event : " +  ev.target.id);
   }
 
 }
