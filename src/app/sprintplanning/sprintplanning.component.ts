@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Sprint } from '../shared/sprint.model';
 
 @Component({
   selector: 'app-sprintplanning',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sprintplanning.component.css']
 })
 export class SprintplanningComponent implements OnInit {
-
+  @Output() sprintSelected = new EventEmitter<Sprint>();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSprintSelected(sprint: Sprint){
+    this.sprintSelected.emit(sprint);
   }
 
 }

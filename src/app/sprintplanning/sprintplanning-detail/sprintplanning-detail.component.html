@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-12" (dragover)="allowDrop($event)" (drop)="drop($event)">
+    <h3>{{ sprint.name }}</h3>
+    <h4>{{ sprint.description }}</h4>
+    <p>{{ this.getTotalBusinessValue(sprint.userStories) }}</p>
+    <div *ngFor="let userStory of sprint.userStories">
+      <a href="#" class="list-group-item clearfix" >
+        <div class="pull-left">
+          <h4 class="list-group-item-heading">{{ userStory.name }}</h4>
+          <h4 class="list-group-item-text">{{ userStory.description }}</h4>
+        </div>
+        <span class="pull-right"><p>{{ userStory.businessValue }}</p></span>
+      </a>
+      <br>
+    </div>
+
+
+  </div>
+</div>

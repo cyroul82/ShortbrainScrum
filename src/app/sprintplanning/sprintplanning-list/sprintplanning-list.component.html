@@ -1,5 +1,5 @@
 <div class="row">
   <div class="col-xs-12">
-    <app-sprintplanning-item *ngFor="let sprint of sprints" [sprint]="sprint"></app-sprintplanning-item>
+    <app-sprintplanning-item *ngFor="let sprint of sprints" [sprint]="sprint" (click)="onSprintClick(sprint)"></app-sprintplanning-item>
   </div>
 </div>

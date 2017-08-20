@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Sprint } from '../shared/sprint.model';
 
 @Component({
   selector: 'app-productbacklog',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./productbacklog.component.css']
 })
 export class ProductbacklogComponent implements OnInit {
-
+  sprint: Sprint;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSprintSelected(sprint: Sprint){
+    this.sprint = sprint;
+    console.log("onSprintSelected : " + sprint.name);
   }
 
 }

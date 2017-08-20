@@ -5,9 +5,9 @@
     <app-productbacklog-list></app-productbacklog-list>
   </div>
   <div class="col-md-4">
-
+    <app-sprintplanning-detail *ngIf="sprint" [sprint]="sprint"></app-sprintplanning-detail>
   </div>
   <div class="col-md-4">
-    <app-sprintplanning></app-sprintplanning>
+    <app-sprintplanning (sprintSelected)="onSprintSelected($event)"></app-sprintplanning>
   </div>
 </div>

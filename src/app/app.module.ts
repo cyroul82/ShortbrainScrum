@@ -13,6 +13,7 @@ import { SprintplanningItemComponent } from './sprintplanning/sprintplanning-lis
 import { HeaderComponent } from './header/header.component';
 import { ProductbacklogControlComponent } from './productbacklog/productbacklog-control/productbacklog-control.component';
 import { SprintplanningControlComponent } from './sprintplanning/sprintplanning-control/sprintplanning-control.component';
+import { SprintplanningDetailComponent } from './sprintplanning/sprintplanning-detail/sprintplanning-detail.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SprintplanningControlComponent } from './sprintplanning/sprintplanning-
     SprintplanningItemComponent,
     HeaderComponent,
     ProductbacklogControlComponent,
-    SprintplanningControlComponent
+    SprintplanningControlComponent,
+    SprintplanningDetailComponent
   ],
   imports: [
     BrowserModule,
